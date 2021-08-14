@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+      </style>
+    <link rel="stylesheet" href="styles.css" />
+    <div class="main-header">Growpartner Coffee Shop</div>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="header">
+        <h1>Welcome to the coffee shop</h1>
+        <h2>Select order preferences</h2>
+        <form class="order-preferences">
+        
+          <select class="drinks" name="drinks" id="drinks" onchange="handleChange()">
+            <option value="Strong Coffee">Strong Coffee</option>
+            <option value="Light Coffee">Light Coffee</option>
+            <option value="Strong Tea">Strong Tea</option>
+            <option value="Light Tea">Light Tea</option>
+          </select>
+          <br />
+          <input
+            class="cups-quantity"
+            id="cups"
+            type="number"
+            default="1"
+            min="1"
+            placeholder="Enter no. of cups"
+            onchange="handleChange()"
+          />
+          <br />
+          <input
+            class="with-sugar"
+            type="checkbox"
+            id="sugar"
+            name="sugar"
+            value="sugar"
+          />
+          <label for="sugar" style="font-size: large">with Sugar</label>
+        </form>
+        <button type="button" class="btn-info" onclick="handleDeduction()" id="pay">Pay Rs.0</button>
+      </div>
+      <div class="stocks">
+        <h1>Stock available</h1>
+        <div class="stock-elements">
+          <p>Water</p>
+          <p>1000</p>
+        </div>
+        <div class="stock-elements">
+          <p>Milk</p>
+          <p>1000</p>
+        </div>
+        <div class="stock-elements">
+          <p>Tea</p>
+          <p>200</p>
+        </div>
+        <div class="stock-elements">
+          <p>Coffee</p>
+          <p>200</p>
+        </div>
+        <div class="stock-elements">
+          <p>Sugar</p>
+          <p>500</p>
+        </div>
+        <button class="refill" onclick="document.location.reload(true)">Refill Stock</button>
+      </div>
+    </div>
+    <script src="app.js"/>
+  </body>
+</html>
+
